@@ -1,16 +1,16 @@
 module.exports = {
   InitialData: [
     {
-      "title": "Clean Kitchen",
-      "desc": "Mom said I must clean the kitchen before I can play games",
-      "done": false,
-      "priority": "10"
+      title: "The Seven Deadly Sins",
+      desc: "4 Seasons, 2 Movies, already watched 4 times",
+      done: true,
+      priority: "3",
     },
     {
-      "title": "Clean Bathroom",
-      "desc": "Dad said I have to clean the bathroom, too",
-      "done": false,
-      "priority": "99"
-    }
-  ]
+      title: "Chainsaw Man",
+      desc: "12 Episodes Currently, watched 11",
+      done: false,
+      priority: "10",
+    },
+  ],
 };
