@@ -6,12 +6,13 @@
 // 04.05.2022 @ BBBaden
 //
 
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 // Bispieldaten fürs Login, die aus einer DB kommen könnten
 const loginDB = {
-	BillyBatson : "Shazam!",
-	JayGarrick: "boringPassword",
+  BillyBatson: "Shazam!",
+  JayGarrick: "boringPassword",
+  admin: "strongpassword",
 };
 
 module.exports = {
