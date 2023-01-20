@@ -1,0 +1,43 @@
+### 
+GET http://localhost:3000/api/getall HTTP/1.1
+
+### 
+GET http://localhost:3000/api/get/1 HTTP/1.1
+
+
+### 
+POST http://localhost:3000/api/addone HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJpbGx5QmF0c29uIiwiaWF0IjoxNjcwNTAyNTQ3LCJleHAiOjE2Nzc2NDQ5NDd9.2vpO67McNM_RzUOTHyZvi9gPcjXBqNGVZ6_FUpRdwYw
+content-type: application/json
+
+{
+    "data": {
+        "title": "Clean Boots",
+        "desc": "Boots must be clean before Santa comes",
+        "done": false,
+        "priority": "2"
+    }
+}
+
+### 
+PUT http://localhost:3000/api/changeone HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJpbGx5QmF0c29uIiwiaWF0IjoxNjcwNTAyNTQ3LCJleHAiOjE2Nzc2NDQ5NDd9.2vpO67McNM_RzUOTHyZvi9gPcjXBqNGVZ6_FUpRdwYw
+content-type: application/json
+
+{
+    "data": {
+        "id": "2",
+        "title": "Shine Boots",
+        "desc": "Boots must be shiny before Santa comes",
+        "done": false,
+        "priority": "1"
+    }
+}
+### 
+DELETE http://localhost:3000/api/delete HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJpbGx5QmF0c29uIiwiaWF0IjoxNjcwNTA4MTU4LCJleHAiOjE2Nzc2NTA1NTh9.ZAeiB4qRVCfTcVbJkHRYwzeojIn7hHdJF8vzQXwFmU0
+content-type: application/json
+
+{
+    "id": "2"
+}
