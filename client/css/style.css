@@ -1,7 +1,8 @@
-* {
-  background-color: cadetblue;
+body {
+  text-align: center;
+  min-height: 100vh;
 }
-.footer {
+footer {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -13,7 +14,7 @@
   font-weight: 500;
   margin-top: auto;
 }
-.header {
+header {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -24,12 +25,16 @@
   font-size: x-large;
   font-weight: 500;
 }
-.list {
+.todo-item {
+  border-color: black;
+}
+.Todo {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-  border: 3px;
-  border-color: black;
+}
+.ChangeOne-Form {
+  display: block;
 }

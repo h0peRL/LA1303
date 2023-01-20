@@ -4,16 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>CRUD Application</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <script src="./js/app.js"></script>
-    <script src="./js/router.js"></script>
-    <script src="./js/sites.js"></script>
+    <header>Autor: Nico Delvecchio</header>
+    <!-- <div id="root">
+        <nav>
+            <a href="../client" onclick="route()">Main</a>
+            <a href="/login" onclick="route()">Login</a>
+            <a href="/todos" onclick="route()">Todos</a>
+        </nav>
+    </div> -->
 
-    <header class="header">LA-1303</header>
     <div id="app"></div>
-    <footer class="footer">Author: Nico Delvecchio</footer>
+    <script src="./js/app.js" type="module"></script>
+
+    <div class="Todo">
+      <div class="ChangeOne-Form">
+        <label id="form">Add Todo: </label>
+        <form id="post-todo">
+          <input type="text" name="name" id="name" placeholder="Name..." />
+          <input
+            type="text"
+            name="desc"
+            id="desc"
+            placeholder="Description..."
+          />
+          <input type="text" name="done" id="done" placeholder="Status..." />
+          <input
+            type="number"
+            name="priority"
+            id="priority"
+            placeholder="Priority..."
+          />
+        </form>
+      </div>
+      <div>
+        <label>Change Todo</label>
+        <form id="change-todo">
+          <input type="number" name="chid" id="chid" placeholder="ID..." />
+          <input type="text" name="chname" id="chname" placeholder="Name..." />
+          <input
+            type="text"
+            name="chdesc"
+            id="chdesc"
+            placeholder="Description..."
+          />
+          <input
+            type="text"
+            name="chdone"
+            id="chdone"
+            placeholder="Status..."
+          />
+          <input
+            type="number"
+            name="chpriority"
+            id="chpriority"
+            placeholder="Priority..."
+          />
+        </form>
+      </div>
+      <div>
+        <label>Delete Todo</label>
+        <form id="delete-todo">
+          <input
+            type="number"
+            name="delid"
+            id="delid"
+            placeholder="Enter Id..."
+          />
+        </form>
+      </div>
+    </div>
+
+    <!-- <div class="Todo">
+        <h1>Todo-List Maker</h1>
+        <form id="new-todo-form">
+            <input type="text" id="new-todo-input"placeholder="What needs to be done? ">
+            <input type="submit" class="hvr-grow" id="new-todo-submit" value="Add To-Do">
+        </form>
+    </div>
+    <div class="mytodo">
+        <section class="todo-list">
+            <h2>My To-Do's</h2>
+        <div class="todo">
+            <div class="content">
+                <input type="text" class="text" value="My To-Do's" readonly>
+            </div>
+            <div class="actions">
+                <p>Prioroty:</p>
+                <button class="edit">Edit</button>
+                <Button class="delete">Delete</Button>
+            </div>
+        </div>
+        </section>
+    </div> -->
+    <footer>
+      <div>Nico Delvechio</div>
+      <div>LB 294</div>
+    </footer>
   </body>
 </html>
