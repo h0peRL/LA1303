@@ -3,13 +3,17 @@ import { router } from "./app.js";
 
 export let renderLogin = () => {
   document.querySelector(".Todo").style.display = "none";
-  const LogInHTML = `<form id="loginForm" onsubmit="return false">
+  const LogInHTML = `
+  <h2>Wenn du ToDo's hinzufügen oder bearbeiten möchtest, musst du dich anmelden.</h2>
+  <form id="loginForm" onsubmit="return false">
     <label for="username">Username:</label><br>
     <input class="loginput" type="text" id="username" name="username"><br>
     <label for="password">Password:</label><br>
     <input class="loginput" type="password" id="password" name="password"><br>
     <button id="loginButton">Log In</button>
-    </form>`;
+    </form>
+    <h2>Hier Sind deine Todos</h2>
+    `;
   function LogIn(username, password) {
     fetch("http://localhost:3000/user/login", {
       method: "POST",
@@ -47,12 +51,46 @@ export let renderLogin = () => {
   LoginPage.innerHTML = LogInHTML;
   const SubmitLogIn = document.getElementById("loginButton");
   SubmitLogIn.addEventListener("click", checkLogInData);
+
+  const URL = "http://localhost:3000/api/getall";
+  const fetchData = {
+    method: "get",
+  };
+  fetch(URL, fetchData)
+    .then((res) => res.json())
+    .then((jsonData) => {
+      console.table(jsonData);
+      createToDo(jsonData);
+    });
+  function createToDo(data) {
+    let todos = "";
+    if (data.length === 0) {
+      document.getElementById("todo").innerHTML = "<div>No Data Found</div>";
+    }
+    const todo = document.createElement("div");
+    const appElement = document.getElementById("app");
+    appElement.appendChild(todo);
+    todo.setAttribute("id", "todo");
+
+    for (let i = 0; i < data.length; i += 1) {
+      todos += `<div class="todo-item">
+    <p>ID: ${data[i].id}</p>
+    <p>${data[i].title}</p>
+    <p>${data[i].desc}</p>
+    <p>done: ${data[i].done}</p>
+    <p>Priority: ${data[i].priority}</p>
+    </div>`;
+      todo.innerHTML = todos;
+    }
+  }
 };
 
 export let renderHome = () => {
   document.querySelector(".Todo").style.display = "flex";
   if (window.userIsLoggedIn === undefined) {
+    window.userIsLoggedIn = true;
     router.navigate("#login");
+    location.reload();
   }
   app.innerHTML = "";
   const LogInHTML = `
