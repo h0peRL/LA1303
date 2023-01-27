@@ -5,9 +5,9 @@ export let renderLogin = () => {
   document.querySelector(".Todo").style.display = "none";
   const LogInHTML = `<form id="loginForm" onsubmit="return false">
     <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username"><br>
+    <input class="loginput" type="text" id="username" name="username"><br>
     <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br>
+    <input class="loginput" type="password" id="password" name="password"><br>
     <button id="loginButton">Log In</button>
     </form>`;
   function LogIn(username, password) {
@@ -56,11 +56,12 @@ export let renderHome = () => {
   }
   app.innerHTML = "";
   const LogInHTML = `
+  <div>
     <h1>Welcome Back User...</h1>
     <p>Sobald sie etwas vornehmen, refreshen sie die Page</p>
     <h2>Wenn sie etwas ändern, hinzufügen oder löschen müssen sie sich erneut anmelden!...</h2>
     <button onClick="window.location.reload();">Refresh Page</button>
-    `;
+    </div>`;
   const LoginPage = document.getElementById("app");
   LoginPage.innerHTML = LogInHTML;
   const adddoneform = document.getElementById("post-todo");
@@ -88,7 +89,7 @@ export let renderHome = () => {
     todo.setAttribute("id", "todo");
 
     for (let i = 0; i < data.length; i += 1) {
-      todos += `<div class="todo-item" style="border: 2px solid black; margin: 2rem;">
+      todos += `<div class="todo-item">
     <p>ID: ${data[i].id}</p>
     <p>${data[i].title}</p>
     <p>${data[i].desc}</p>
@@ -98,7 +99,6 @@ export let renderHome = () => {
       todo.innerHTML = todos;
     }
   }
-
   // ADD ONE FUNCTION
 
   function addOne(ev) {

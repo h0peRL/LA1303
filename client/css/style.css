@@ -1,6 +1,7 @@
 body {
   text-align: center;
   min-height: 100vh;
+  background-color: rgb(216, 198, 173);
 }
 footer {
   display: flex;
@@ -26,7 +27,12 @@ header {
   font-weight: 500;
 }
 .todo-item {
-  border-color: black;
+  border-radius: 25px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  margin: 2rem;
+  background-color: rgb(143, 94, 43);
+  color: aliceblue;
 }
 .Todo {
   display: flex;
@@ -34,7 +40,27 @@ header {
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
+  background: rgb(32, 48, 56);
+  border-radius: 25px;
+  padding: 0.5 rem;
+  margin: 0.3rem;
+  color: aliceblue;
 }
 .ChangeOne-Form {
   display: block;
+}
+#loginForm {
+  padding: 15rem;
+}
+.loginput {
+  background-color: rgb(143, 94, 43);
+  color: aliceblue;
+  border-radius: 25px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+}
+input {
+  border-radius: 25px;
+  padding: 0.2rem;
+  margin: 0.3rem;
 }
