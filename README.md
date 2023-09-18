@@ -19,7 +19,7 @@ Projektdokumentation
 
 CRUD Application:
 
-Ich habe von dem Modul 294 das mir bereitgestellte Backend von Herrn Ajradini und Lauk bennutzt, um darum eine neue CRUD Applikatation zu erstellen. Ich habe mich dazu Entsschieden, einen ToDo-List Maker, den ich dann verwende, um meine Animeliste (Eine Liste an Anime die ich schauen möchte) zu er
+Ich habe von dem Modul 294 das mir bereitgestellte Backend von Herrn Ajradini und Lauk bennutzt, um darum eine neue CRUD Applikatation zu erstellen. Ich habe mich dazu Entsschieden, einen ToDo-List Maker, den ich dann verwende, um meine Animeliste (Eine Liste an Anime die ich schauen möchte) zu erstellen.
 
 ## 1.2
 
